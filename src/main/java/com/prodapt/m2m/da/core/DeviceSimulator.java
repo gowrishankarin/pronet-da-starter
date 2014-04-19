@@ -14,23 +14,27 @@ import com.prodapt.m2m.rest.domain.ContentInstance;
 public class DeviceSimulator {
 
 
-    
-
-	public void createApplication() {
+	public Application createApplication() {
 
 		Application newApp = new Application();
+		
+		return newApp;
 
 	}
 
-	public void createDevice() {
+	public Container createDevice() {
 
 		Container newContainer = new Container();
+		
+		return newContainer;
 
 	}
 
-	public void sendDeviceParameters() {
+	public ContentInstance sendDeviceParameters() {
 
 		ContentInstance contentInstance = new ContentInstance();
+		
+		return contentInstance;
 
 	}
 }
