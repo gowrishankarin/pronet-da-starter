@@ -21,7 +21,7 @@ import com.prodapt.m2m.da.events.Receiver;
 @Configuration
 @ComponentScan({
     "package com.prodapt.m2m.da",
-    "package com.prodapt.m2m.da.events"
+    "package com.prodapt.m2m.da.core"
 })
 @EnableAutoConfiguration
 public class Application implements CommandLineRunner{

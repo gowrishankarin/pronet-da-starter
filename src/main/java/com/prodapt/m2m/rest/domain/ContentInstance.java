@@ -66,4 +66,8 @@ public class ContentInstance {
 
 		return contentInstance;
 	}*/
+	
+	public ContentInstance(String content) {
+		this.content = content;
+	}
 }
