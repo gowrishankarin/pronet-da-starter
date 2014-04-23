@@ -53,10 +53,11 @@ public class DeviceController {
 		if(null == deviceSimulator) {
 			deviceSimulator = new DeviceSimulator(appId, m2mPoC);
 			return new ResponseEntity<String> (
-				"Network Application Configured Successfully", HttpStatus.OK);
+				"Device Application Configured Successfully", HttpStatus.OK);
 		} else {
 			return new ResponseEntity<String> (
-				"NA Reconfiguration Forbidden", HttpStatus.FORBIDDEN);
+				"NA Reconfiguration Forbidden, App Id:" + deviceSimulator.getAppId(), 
+				HttpStatus.FORBIDDEN);
 		}
 
 	}
@@ -65,7 +66,7 @@ public class DeviceController {
 		method = RequestMethod.GET)
 	public ResponseEntity<String> createDevice() {
 
-		if(deviceSimulator != null && deviceSimulator.getDeviceId() != null) {
+		if(deviceSimulator != null && deviceSimulator.getDeviceId() == null) {
 
 			Container device = deviceSimulator.createDevice();
 			String deviceId = device.getContainerId();

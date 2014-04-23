@@ -30,14 +30,18 @@ public class DeviceSimulator {
 		this.appId = appId;
 		this.m2mPoC = m2mPoC;
 	}
-
+	
+	public DeviceSimulator() {
+		
+	}
 
 	public Application createApplication() {
-
 		Application newApp = new Application();
-		
 		return newApp;
-
+	}
+	
+	public String getAppId() {
+		return appId;
 	}
 
 	public String getDeviceId() {

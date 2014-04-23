@@ -20,8 +20,9 @@ import com.prodapt.m2m.da.events.Receiver;
 
 @Configuration
 @ComponentScan({
-    "package com.prodapt.m2m.da",
-    "package com.prodapt.m2m.da.core"
+    "com.prodapt.m2m.da",
+    "com.prodapt.m2m.da.core",
+    "com.prodapt.m2m.da.events"
 })
 @EnableAutoConfiguration
 public class Application implements CommandLineRunner{
@@ -29,11 +30,6 @@ public class Application implements CommandLineRunner{
 	@Bean
     Environment env() {
     	return new Environment();
-    }
-
-    @Bean
-    public RestTemplate rest() {
-    	return new RestTemplate();
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -59,6 +55,11 @@ public class Application implements CommandLineRunner{
 
     @Autowired
     private Publisher publisher;
+
+    @Bean
+    public static RestTemplate rest() {
+    	return new RestTemplate();
+    }
 
     @Override
     public void run(String... args) throws Exception {
