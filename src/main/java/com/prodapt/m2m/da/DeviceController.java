@@ -23,6 +23,7 @@ public class DeviceController {
 	@Autowired
 	private Publisher publisher;
 
+	@Autowired
 	private DeviceSimulator deviceSimulator;
 
 	@RequestMapping(value = {"/pronet-da-starter/applications/{appId}/containers/{deviceId}/commands"},
@@ -50,8 +51,8 @@ public class DeviceController {
 		@RequestParam(value = "m2mPoC", required=true) String m2mPoC,
 		@RequestParam(value = "appId", required=true) String appId ) {
 
-		if(null == deviceSimulator) {
-			deviceSimulator = new DeviceSimulator(appId, m2mPoC);
+		if(null != deviceSimulator) {
+			deviceSimulator.init(appId, m2mPoC);
 			return new ResponseEntity<String> (
 				"Device Application Configured Successfully", HttpStatus.OK);
 		} else {

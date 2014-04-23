@@ -2,7 +2,7 @@
 * @Author: Gowri Gary Shankar
 * @Date:   2014-04-19 12:45:13
 * @Last Modified by:   Gowri Gary Shankar
-* @Last Modified time: 2014-04-19 12:51:20
+* @Last Modified time: 2014-04-23 22:16:46
 */
 package com.prodapt.m2m.da.core;
 
@@ -26,7 +26,7 @@ public class DeviceSimulator {
 	private String deviceId;
 	private String m2mPoC;
 
-	public DeviceSimulator(String appId, String m2mPoC) {
+	public void init(String appId, String m2mPoC) {
 		this.appId = appId;
 		this.m2mPoC = m2mPoC;
 	}
