@@ -17,7 +17,6 @@ import com.prodapt.m2m.rest.domain.Container;
 import com.prodapt.m2m.rest.domain.ContentInstance;
 
 @Component
-
 public class DeviceSimulator {
 
 	@Autowired
@@ -41,6 +40,10 @@ public class DeviceSimulator {
 
 	}
 
+	public String getDeviceId() {
+		return deviceId;
+	}
+
 	public Container createDevice() {
 
 		Container device = new Container();
@@ -58,13 +61,12 @@ public class DeviceSimulator {
 
 		this.deviceId = deviceId;
 
-		System.out.println("Device Id: " + deviceId);
 		
 		return newDevice;
 
 	}
 
-	public ContentInstance sendDeviceParameters() {
+	public ContentInstance sendDeviceParams() {
 
 		ContentInstance deviceParams = new ContentInstance("SIMULATOR CONTENT");
 
@@ -80,9 +82,6 @@ public class DeviceSimulator {
 	
 		ContentInstance newDeviceParams = newDeviceParamsEntity.getBody();
 
-		System.out.println("Device Id: " + deviceId + " Reading Reference: " + 
-			newDeviceParams.getContentInstanceId());
-		
 		return newDeviceParams;
 	}
 }
