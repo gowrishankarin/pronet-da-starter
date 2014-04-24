@@ -2,7 +2,7 @@
 * @Author: Gowri Gary Shankar
 * @Date:   2014-04-19 09:04:42
 * @Last Modified by:   Gowri Gary Shankar
-* @Last Modified time: 2014-04-19 09:33:54
+* @Last Modified time: 2014-04-24 12:15:40
 */
 
 package com.prodapt.m2m.da.events;
@@ -23,6 +23,6 @@ public class EventProcessor {
 
 	public void commandReceivedEvent(int command) throws InterruptedException {
 
-		reactor.notify("events", Event.wrap(command));
+		reactor.notify("commands", Event.wrap(command));
 	}
 }

@@ -5,8 +5,6 @@ import java.util.Date;
 
 public class Container {
 
-	private String key;
-	
 	private String containerId;
 	private String accessRightID;
 	private ArrayList<String> searchStrings;
@@ -15,10 +13,6 @@ public class Container {
 	private int maxNrOfInstances;
 	private String contentInstancesReference;
 	private String subscriptionReference;
-	
-	public String getKey() {
-		return key;
-	}
 	
 	public String getContainerId() {
 		return containerId;
@@ -44,42 +38,40 @@ public class Container {
 	public String getSubscriptionReference() {
 		return subscriptionReference;
 	}
-/*
-	public ContainerDetails toContainerDetails(final String containerId) { 
-		ContainerDetails details = new ContainerDetails();
 
-		details.setContainerId(containerId);
-		details.setAccessRightID(accessRightID);
-		details.setSearchStrings(searchStrings);
-		details.setCreationTime(creationTime);
-		details.setLastModifiedTime(lastModifiedTime);
-		details.setMaxNrOfInstances(maxNrOfInstances);
-		details.setContentInstancesReference(contentInstancesReference);
-		details.setSubscriptionReference(subscriptionReference);
-
-		return details;
-
-
+	public Container() {
+		
 	}
 
-	public static Container fromContainerDetails(
-		ContainerDetails containerDetails) {
-
-		Container container = new Container();
-
-		container.containerId = containerDetails.getContainerId();
-		container.accessRightID = containerDetails.getAccessRightID();
-		container.searchStrings = containerDetails.getSearchStrings();
-		container.creationTime = containerDetails.getCreationTime();
-		container.lastModifiedTime = containerDetails.getLastModifiedTime();
-		container.maxNrOfInstances = containerDetails.getMaxNrOfInstances();
-		container.contentInstancesReference
-			= containerDetails.getContentInstancesReference();
-		container.subscriptionReference
-			= containerDetails.getSubscriptionReference();	
-
-		return container;
-
+	public void setContainerId(String containerId) {
+		this.containerId = containerId;
 	}
-	*/
+
+	public void setAccessRightID(String accessRightID) {
+		this.accessRightID = accessRightID;
+	}
+
+	public void setSearchStrings(ArrayList<String> searchStrings) {
+		this.searchStrings = searchStrings;
+	}
+
+	public void setCreationTime(Date creationTime) {
+		this.creationTime = creationTime;
+	}
+
+	public void setLastModifiedTime(Date lastModifiedTime) {
+		this.lastModifiedTime = lastModifiedTime;
+	}
+
+	public void setMaxNrOfInstances(int maxNrOfInstances) {
+		this.maxNrOfInstances = maxNrOfInstances;
+	}
+
+	public void setContentInstancesReference(String contentInstancesReference) {
+		this.contentInstancesReference = contentInstancesReference;
+	}
+
+	public void setSubscriptionReference(String subscriptionReference) {
+		this.subscriptionReference = subscriptionReference;
+	}
 }

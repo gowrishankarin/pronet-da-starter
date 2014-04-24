@@ -34,40 +34,30 @@ public class ContentInstance {
 	public String getContent() {
 		return content;
 	}
-
-/*	public ContentInstanceDetails toContentInstanceDetails(String contentInstanceId) {
-		
-		ContentInstanceDetails details = new ContentInstanceDetails();
-
-		details.setContentInstanceId(contentInstanceId);
-		details.setCreationTime(creationTime);
-		details.setLastModifiedTime(lastModifiedTime);
-		details.setContentTypes(contentTypes);
-		details.setMimeType(mimeType);
-		details.setContentSize(contentSize);
-		details.setContent(content);
-
-		return details;
-
+	
+	public void setContentInstanceId(String contentInstanceId) {
+		this.contentInstanceId = contentInstanceId;
+	}
+	public void setCreationTime(Date creationTime) {
+		this.creationTime = creationTime;
+	}
+	public void setLastModifiedTime(Date lastModifiedTime) {
+		this.lastModifiedTime = lastModifiedTime;
+	}
+	public void setContentTypes(ArrayList<String> contentTypes) {
+		this.contentTypes = contentTypes;
+	}
+	public void setMimeType(ArrayList<String> mimeType) {
+		this.mimeType = mimeType;
+	}
+	public void setContentSize(int contentSize) {
+		this.contentSize = contentSize;
+	}
+	public void setContent(String content) {
+		this.content = content;
 	}
 
-	public static ContentInstance fromContentInstanceDetails(
-		ContentInstanceDetails contentInstanceDetails) {
+	public ContentInstance() {
 		
-		ContentInstance contentInstance = new ContentInstance();
-
-		contentInstance.contentInstanceId = contentInstanceDetails.getContentInstanceId();
-		contentInstance.creationTime = contentInstanceDetails.getCreationTime();
-		contentInstance.lastModifiedTime = contentInstanceDetails.getLastModifiedTime();
-		contentInstance.contentTypes = contentInstanceDetails.getContentTypes();
-		contentInstance.mimeType = contentInstanceDetails.getMimeType();
-		contentInstance.contentSize = contentInstanceDetails.getContentSize();
-		contentInstance.content = contentInstanceDetails.getContent();
-
-		return contentInstance;
-	}*/
-	
-	public ContentInstance(String content) {
-		this.content = content;
 	}
 }

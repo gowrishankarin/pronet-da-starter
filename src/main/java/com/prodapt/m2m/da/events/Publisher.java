@@ -2,7 +2,7 @@
 * @Author: Gowri Gary Shankar
 * @Date:   2014-04-19 09:34:03
 * @Last Modified by:   Gowri Gary Shankar
-* @Last Modified time: 2014-04-19 09:36:04
+* @Last Modified time: 2014-04-24 16:49:10
 */
 
 package com.prodapt.m2m.da.events;
@@ -23,6 +23,6 @@ public class Publisher {
 
 	public void commandReceivedEvent(CommandInfo commandInfo) throws InterruptedException {
 
-		reactor.notify("events", Event.wrap(commandInfo));
+		reactor.notify("commands", Event.wrap(commandInfo));
 	}
 }

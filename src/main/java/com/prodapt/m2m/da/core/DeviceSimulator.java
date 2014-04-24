@@ -2,7 +2,7 @@
 * @Author: Gowri Gary Shankar
 * @Date:   2014-04-19 12:45:13
 * @Last Modified by:   Gowri Gary Shankar
-* @Last Modified time: 2014-04-23 22:16:46
+* @Last Modified time: 2014-04-24 10:55:40
 */
 package com.prodapt.m2m.da.core;
 
@@ -72,7 +72,8 @@ public class DeviceSimulator {
 
 	public ContentInstance sendDeviceParams() {
 
-		ContentInstance deviceParams = new ContentInstance("SIMULATOR CONTENT");
+		ContentInstance deviceParams = new ContentInstance();
+		deviceParams.setContent("SIMULATOR CONTENT");
 
 		HttpEntity<ContentInstance> deviceParamsEntity
 			= new HttpEntity<ContentInstance> (deviceParams);
